@@ -10,10 +10,12 @@ body {
   /* grid-template: filas/columnas */
   /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
   /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
-  grid-template: 300px 100px 100px / minmax(200px, 1fr) 1fr 1fr 1fr;
-  column-gap: 30px;
-  row-gap: 50px;
+  grid-template: 100px 1fr 150px / 200px 1fr;
   grid-gap: 10px;
+  height: 100vh;
+  grid-template-areas: "header header"
+                        "left contenido"
+                        "footer footer";
 }
 
 .item {
@@ -35,4 +37,20 @@ body {
 .item .item {
   background-color: yellow;
   color: #444;
+}
+
+.header {
+  grid-area: header;
+}
+
+.left {
+  grid-area: left;
+}
+
+.contenido {
+  grid-area: contenido;
+}
+
+.footer {
+  grid-area: footer
 }
